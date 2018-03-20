@@ -218,7 +218,8 @@ div {
               padding-right: 0.3em;
             }
         }
-        #busuanzi_value_page_pv {
+        #busuanzi_value_page_pv,
+        .leancloud_visitors {
             &:before {
               font-family: "FontAwesome";
               content: "\f024";

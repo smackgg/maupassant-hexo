@@ -44,3 +44,5 @@ html(lang=config.language)
 
     include _partial/totop.pug
     include _partial/after_footer.pug
+    if config.leancloud_visitors.enable
+      include _partial/leancloud.pug

@@ -17,6 +17,11 @@ block content
         span#busuanzi_container_page_pv= ' | '
           span#busuanzi_value_page_pv
           span= ' ' + __('Hits')
+      if config.leancloud_visitors.enable == true
+        span=  ' | '
+        span.leancloud_visitors(id=url_for(page.path), data-flag-title=page.title)
+          span#leancloud-visitors-count
+          span= ' ' + __('Hits')
     if theme.disqus
       a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
     if theme.changyan

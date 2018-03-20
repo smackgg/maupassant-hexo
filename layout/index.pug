@@ -18,6 +18,11 @@ block content
         a.disqus-comment-count(data-disqus-identifier=post.path, href=url_for(post.path) + '#disqus_thread')
       if theme.changyan
         a.ds-thread-count(href=url_for(post.path) + '#SOHUCS')
+          if config.leancloud_visitors.enable == true
+            span.leancloud_visitors(id=url_for(post.path), data-flag-title=post.title)
+              span#leancloud-visitors-count
+                span= ' ' + __('Hits')
+                span=  ' | '
           span.cy_cmt_count(id='sourceId::' + post.date.valueOf() style='margin: 0 3px 0 1px;') 0
           span= ' ' + __('Comment')
       if post.description
