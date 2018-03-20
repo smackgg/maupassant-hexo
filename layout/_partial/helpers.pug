@@ -16,6 +16,9 @@ mixin a_with_current(href, content, id)
 mixin title(page)
   if page
     if page.title
-      = page.title
+      if page.top
+        = '[置顶]' + page.title
+      else
+        = page.title
     else
       = _p('no-title')
